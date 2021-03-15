@@ -1,0 +1,4 @@
+E:\Développement\perso\concourstwitter\LibTwitter.Core\obj\Debug\netcoreapp2.1\LibTwitter.Core.AssemblyInfoInputs.cache
+E:\Développement\perso\concourstwitter\LibTwitter.Core\obj\Debug\netcoreapp2.1\LibTwitter.Core.AssemblyInfo.cs
+E:\Développement\perso\concourstwitter\LibTwitter.Core\obj\Debug\netcoreapp2.1\LibTwitter.Core.csproj.CoreCompileInputs.cache
+E:\Développement\perso\concourstwitter\LibTwitter.Core\obj\Debug\netcoreapp2.1\LibTwitter.Core.csprojAssemblyReference.cache

@@ -1,0 +1,9 @@
+E:\Développement\perso\concourstwitter\YouggyTw\bin\Debug\netcoreapp1.1\YouggyTw.deps.json
+E:\Développement\perso\concourstwitter\YouggyTw\bin\Debug\netcoreapp1.1\YouggyTw.dll
+E:\Développement\perso\concourstwitter\YouggyTw\bin\Debug\netcoreapp1.1\YouggyTw.pdb
+E:\Développement\perso\concourstwitter\YouggyTw\obj\Debug\netcoreapp1.1\YouggyTw.csprojAssemblyReference.cache
+E:\Développement\perso\concourstwitter\YouggyTw\obj\Debug\netcoreapp1.1\YouggyTw.AssemblyInfoInputs.cache
+E:\Développement\perso\concourstwitter\YouggyTw\obj\Debug\netcoreapp1.1\YouggyTw.AssemblyInfo.cs
+E:\Développement\perso\concourstwitter\YouggyTw\obj\Debug\netcoreapp1.1\YouggyTw.csproj.CoreCompileInputs.cache
+E:\Développement\perso\concourstwitter\YouggyTw\obj\Debug\netcoreapp1.1\YouggyTw.dll
+E:\Développement\perso\concourstwitter\YouggyTw\obj\Debug\netcoreapp1.1\YouggyTw.pdb

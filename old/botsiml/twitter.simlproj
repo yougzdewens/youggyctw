@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SimlProject>
+  <Profile>Classic</Profile>
+  <Name>Twitter</Name>
+  <Directory>twitter</Directory>
+  <BotName>Twitter</BotName>
+  <Personality>Cool</Personality>
+  <Author>Hugues Dehen</Author>
+  <Description>Twitter</Description>
+  <Date>20-03-30 01:39:56.505</Date>
+  <Notes></Notes>
+</SimlProject>

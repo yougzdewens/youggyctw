@@ -1,0 +1,61 @@
+﻿<Siml>
+  <Concept Name="Introduction">
+    
+    <Model>
+      <Pattern>
+        <Item>* (BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * ADRESSE</Item>
+        <Item>* (BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * COORDONNÉES</Item>
+        <Item>(BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * ADRESSE</Item>
+        <Item>(BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * COORDONNÉES</Item>
+        <Item>* (BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * ADRESSE *</Item>
+        <Item>* (BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * COORDONNÉES *</Item>
+        <Item>(BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * ADRESSE *</Item>
+        <Item>(BESOIN|FILE MOI|DONNER|DONNEZ|DONNEZ-MOI) * COORDONNÉES *</Item>
+      </Pattern>
+      <Response>Pas de soucis, c'est Hugues Dehen, 10 rue de Croy, 59590, Raismes. 0679443894.</Response>
+    </Model>
+    
+    <Model>
+      <Pattern>
+        <Item>(PARCE QUE|PARCEQUE|CAR|PARCE-QUE) * GAGNÉ</Item>
+      </Pattern>
+      <Response>Trop bien !</Response>
+    </Model>
+    
+    <Model>
+      <Pattern>
+        <Item>SALUT</Item>
+        <Item>BONJOUR</Item>
+        <Item>HELLO</Item>
+        <Item>COUCOU</Item>
+      </Pattern>
+      <Response>Bonjour</Response>
+      <Model>
+        <Pattern>
+          <Item>CA VA ?</Item>
+          <Item>CA VA</Item>
+        </Pattern>
+        <Response>super et toi ?</Response>
+      </Model>
+    </Model>
+    
+    <Model>
+      <Pattern>
+        <Item>CA VA ?</Item>
+        <Item>COMMENT ALLEZ VOUS ?</Item>
+        <Item>CA VA ?</Item>
+        <Item>COMMENT VAS-TU ?</Item>
+        <Item>COMMENT VAS TU ?</Item>
+        <Item>COMMENT TU VAS ?</Item>
+      </Pattern>
+      <Response>Bonjour</Response>
+    </Model>
+    
+    <Model>
+      <Pattern>* BONNE * (SOIRÉE|JOURNÉE|APRÈS MIDI|APRÈS-MIDI)</Pattern>
+      <Pattern>BONNE * (SOIRÉE|JOURNÉE|APRÈS MIDI|APRÈS-MIDI)</Pattern>
+      <Response>Merci toi aussi !</Response>
+    </Model>
+    
+  </Concept>
+</Siml>

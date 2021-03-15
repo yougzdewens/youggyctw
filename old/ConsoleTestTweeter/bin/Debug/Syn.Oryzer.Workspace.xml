@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syn.Oryzer.Workspace</name>
+    </assembly>
+    <members>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.EditorAttribute.EditorType">
+            <summary>
+                Specifies a special type of editor for this property.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.EditorAttribute.EditorParameters">
+            <summary>
+                Specifies a set of parameters for the editor.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.InputPortAttribute.AllowArrange">
+            <summary>
+            Specifies a value indicating if connections to this port can be re-arranged.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.NodeAttribute.DisplayName">
+            <summary>
+                Gets or sets the node display name.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.NodeAttribute.Description">
+            <summary>
+                Gets or sets the node description.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.NodeAttribute.Category">
+            <summary>
+                Gets or sets the category to which this node belongs to.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.NodeAttribute.NodeType">
+            <summary>
+                Gets or sets the type of this node.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.NodeAttribute.IsIndexed">
+            <summary>
+            Gets or sets a value indicating if this node type should be visible in workspace node explorer.
+            </summary>
+            <remarks>Default value is <c>true</c></remarks>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.PortAttribute.DisplayName">
+            <summary>
+                Specifies a display name for this port.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.PortAttribute.Serialize">
+            <summary>
+                Specifies a value indicating if the value of this port should be serialized.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Attributes.PortAttribute.Description">
+            <summary>
+            Specifies a description for this port.
+            </summary>
+        </member>
+        <member name="T:Syn.Oryzer.Workspace.Attributes.PortEditorAttribute">
+            <summary>
+            Specifies if a port can have its on text UI.
+            </summary>
+        </member>
+        <member name="T:Syn.Oryzer.Workspace.Collections.ConnectionCollection">
+            <inheritdoc />
+            <summary>
+                Collection that is used by a GUI system to display the connections visually.
+            </summary>
+        </member>
+        <member name="M:Syn.Oryzer.Workspace.Collections.VisualConnectionCollection.Connect(Syn.Oryzer.Workspace.Elements.OutputPort,Syn.Oryzer.Workspace.Elements.InputPort)">
+            <summary>
+            Connects the specified output port to input port.
+            </summary>
+            <param name="fromPort">The output port.</param>
+            <param name="toPort">The input port.</param>
+            <returns>The new connection.</returns>
+            <remarks>If an input port is expandable and may have sub ports you should specify the sub port index.</remarks>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Events.EnvironmentState.Item(System.String)">
+            <summary>
+            Gets or sets an object with the specified key.
+            </summary>
+            <param name="itemName">Name of the object to search for.</param>
+            <returns>Null if an object with the specified key doesn't exist.</returns>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Events.ScopeState.Item(System.String)">
+            <summary>
+            Gets or sets an object with the specified key.
+            </summary>
+            <param name="itemName">Name of the object to search for.</param>
+            <returns>Null if an object with the specified key doesn't exist.</returns>
+        </member>
+        <member name="F:Syn.Oryzer.Workspace.EditorTypes.StringListEditor">
+            <summary>
+                Editors for a list of string values.
+            </summary>
+        </member>
+        <member name="F:Syn.Oryzer.Workspace.EditorTypes.FolderPath">
+            <summary>
+                Editor for directory path selection.
+            </summary>
+        </member>
+        <member name="F:Syn.Oryzer.Workspace.EditorTypes.FilePath">
+            <summary>
+                Editor for file path selection.
+            </summary>
+        </member>
+        <member name="F:Syn.Oryzer.Workspace.EditorParameters.MultiLineTextEditor">
+            <summary>
+                Specifies if multi-line editing should be enabled.
+            </summary>
+        </member>
+        <member name="F:Syn.Oryzer.Workspace.EditorParameters.ReadOnlyTextEditor">
+            <summary>
+                Specifies if the editor should be read-only.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Connection.IsVisible">
+            <summary>
+            Gets or sets a value indicating if this connection is visible.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.EditorContext.Origin">
+            <summary>
+                Gets a value indicating if this editable property belongs to an <see cref="T:Syn.Oryzer.Workspace.Elements.InputPort" />
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.InputPort.AllowArrange">
+            <summary>
+                Gets a value indicating if connections to this port can be re-arranged.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.InputPort.IsExpandable">
+            <summary>
+            Gets a value indicating if this port can expand on Object to Collection connection.
+            </summary>
+        </member>
+        <member name="M:Syn.Oryzer.Workspace.Elements.InputPort.SetInputPortValue(System.Boolean,Syn.Oryzer.Workspace.Elements.Connection,System.Object)">
+            <summary>
+            Called when the source property value is changed.
+            </summary>
+            <param name="initial"></param>
+            <param name="connection"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.Scope">
+            <summary>
+            Gets the scope data store.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.IsFolded">
+            <summary>
+            Gets or sets a value indicating whether this node is folded.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.DisplayName">
+            <summary>
+            Gets or sets the node display name.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.Position">
+            <summary>
+            Gets or sets the current position of the node in workspace graph.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.IsSelected">
+            <summary>
+            Gets or sets a value indicating if this node is selected.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.Editor">
+            <summary>
+                Gets or sets a custom global editor control for this node.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.Width">
+            <summary>
+                Gets or sets the width of this node.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Node.Height">
+            <summary>
+                Gets or sets the height of this node.
+            </summary>
+        </member>
+        <member name="M:Syn.Oryzer.Workspace.Elements.Node.Evaluate(Syn.Oryzer.Workspace.Elements.CallerContext)">
+            <summary>
+                This method is called whenever an input port value of this node is changed.
+            </summary>
+            <remarks>
+            The method should not change the state of any input port or their incoming values.
+            </remarks>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Port.IsEnabled">
+            <summary>
+            Gets or sets a value indicating if this port is enabled or not. 
+            Setting this property's value changes the value of <see cref="P:Syn.Oryzer.Workspace.Elements.Port.IsVisible"/> as well.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.Elements.Port.OldNames">
+            <summary>
+            Specifies a set of names that this port had for compatibility and refactoring.
+            </summary>
+        </member>
+        <member name="M:Syn.Oryzer.Workspace.Extensions.NodeExtensions.SelectSelfAndDescendants(Syn.Oryzer.Workspace.Elements.Node)">
+            <summary>
+            Selects the node and its descendants.
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.Plugins">
+            <summary>
+            Gets the plugin collection.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.UserNote">
+            <summary>
+            Gets or sets user note.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.Instance">
+            <summary>
+            Gets a static <see cref="T:Syn.Oryzer.Workspace.OryzerWorkspace"/> intance.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.IsSavePending">
+            <summary>
+            Gets or sets a value indicating if this workspace may need to be saved due to changes.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.MinimumConnectorDistance">
+            <summary>
+                Gets or sets the minimum distance during connection for snapping.
+            </summary>
+            <remarks>Default is <c>15</c></remarks>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.Title">
+            <summary>
+            Gets or sets the workspace title;
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.FilePath">
+            <summary>
+            Gets or sets the file path containing the workspace.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.Width">
+            <summary>
+            Gets or sets the workspace canvas width.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.Height">
+            <summary>
+            Gets or sets the workspace canvas height.
+            </summary>
+        </member>
+        <member name="M:Syn.Oryzer.Workspace.OryzerWorkspace.ExpandToContent">
+            <summary>
+                Expand the content area to fit the rectangles.
+            </summary>
+        </member>
+        <member name="M:Syn.Oryzer.Workspace.OryzerWorkspace.Save(System.String)">
+            <summary>
+                Saves workspace to the specified file path.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:Syn.Oryzer.Workspace.OryzerWorkspace.Load(System.String)">
+            <summary>
+                Loads workspace from the specified file path.
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.OryzerWorkspace.HasLoaded">
+            <summary>
+            Gets or sets a value indicating if the workspace has loaded.
+            </summary>
+        </member>
+        <member name="E:Syn.Oryzer.Workspace.OryzerWorkspace.NodeDoubleClicked">
+            <summary>
+                Occurs when a node is doubled clicked.
+            </summary>
+        </member>
+        <member name="E:Syn.Oryzer.Workspace.OryzerWorkspace.NodeDeleted">
+            <summary>
+                Occurs when a node is deleted.
+            </summary>
+        </member>
+        <member name="E:Syn.Oryzer.Workspace.OryzerWorkspace.Saving">
+            <summary>
+                Occurs when the workspace graph is being saved.
+            </summary>
+        </member>
+        <member name="E:Syn.Oryzer.Workspace.OryzerWorkspace.Loading">
+            <summary>
+                Occurs when a new workspace graph is being loaded.
+            </summary>
+        </member>
+        <member name="E:Syn.Oryzer.Workspace.OryzerWorkspace.Loaded">
+            <summary>
+            Occurs when a new workspace graph is loaded.
+            </summary>
+        </member>
+        <member name="F:Syn.Oryzer.Workspace.PortNames.Self">
+            <summary>
+            Gets the Self port label.
+            </summary>
+            <remarks>Should be used on node output ports where the output is the node instance itself.</remarks>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.WorkspaceSettings.ExpansionOffset">
+            <summary>
+            Gets or sets the width and height value that is added during expansion.
+            </summary>
+        </member>
+        <member name="P:Syn.Oryzer.Workspace.WorkspaceSettings.UnknownCategoryName">
+            <summary>
+            Gets or sets the default category name for nodes that do not specify a category.
+            </summary>
+        </member>
+    </members>
+</doc>

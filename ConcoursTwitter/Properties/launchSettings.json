@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "ConcoursTwitter": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "CONSUMERSECRET": "UylP6CjS6otTszhiVAlwMU9q14h9TzwepgwwxYUXW79clOrsP9",
+        "CONNECTIONSTRINGDB": "Data Source=192.168.1.32;Initial Catalog=twitter;User ID=sa;Password=Genie2121*",
+        "ACCESSTOKEN": "1136252021332434947-EfEE2QhF581mikSsENWQL1J1WK2TJS",
+        "CONSUMERKEY": "Rsosp6RhEURpQi4GQtScDE2ge",
+        "ACCESSTOKENSECRET": "m15mKbsAWqdmUWxrNmQRmnOa2Kq7mGDDUEjhTODNT4PKP",
+        "RESETMODE": "false",
+        "SEARCHANDFOLLOW": " rt ,follow;- rt,follow;rt ,follow;retweet,follow;rt+,follow;rt/,follow;#rt,follow"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

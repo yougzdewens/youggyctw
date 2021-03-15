@@ -1,0 +1,13 @@
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\bin\Release\netcoreapp3.1\ConcoursTwitter.exe
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\bin\Release\netcoreapp3.1\ConcoursTwitter.deps.json
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\bin\Release\netcoreapp3.1\ConcoursTwitter.runtimeconfig.json
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\bin\Release\netcoreapp3.1\ConcoursTwitter.runtimeconfig.dev.json
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\bin\Release\netcoreapp3.1\ConcoursTwitter.dll
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\bin\Release\netcoreapp3.1\ConcoursTwitter.pdb
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\obj\Release\netcoreapp3.1\ConcoursTwitter.csprojAssemblyReference.cache
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\obj\Release\netcoreapp3.1\ConcoursTwitter.AssemblyInfoInputs.cache
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\obj\Release\netcoreapp3.1\ConcoursTwitter.AssemblyInfo.cs
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\obj\Release\netcoreapp3.1\ConcoursTwitter.csproj.CoreCompileInputs.cache
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\obj\Release\netcoreapp3.1\ConcoursTwitter.dll
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\obj\Release\netcoreapp3.1\ConcoursTwitter.pdb
+C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\obj\Release\netcoreapp3.1\ConcoursTwitter.genruntimeconfig.cache

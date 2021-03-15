@@ -1,0 +1,9 @@
+E:\Développement\perso\concourstwitter\TwitterAPI\obj\Release\netcoreapp2.1\TwitterAPI.csprojAssemblyReference.cache
+E:\Développement\perso\concourstwitter\TwitterAPI\obj\Release\netcoreapp2.1\TwitterAPI.AssemblyInfoInputs.cache
+E:\Développement\perso\concourstwitter\TwitterAPI\obj\Release\netcoreapp2.1\TwitterAPI.AssemblyInfo.cs
+E:\Développement\perso\concourstwitter\TwitterAPI\obj\Release\netcoreapp2.1\TwitterAPI.csproj.CoreCompileInputs.cache
+E:\Développement\perso\concourstwitter\TwitterAPI\bin\Release\netcoreapp2.1\TwitterAPI.deps.json
+E:\Développement\perso\concourstwitter\TwitterAPI\bin\Release\netcoreapp2.1\TwitterAPI.dll
+E:\Développement\perso\concourstwitter\TwitterAPI\bin\Release\netcoreapp2.1\TwitterAPI.pdb
+E:\Développement\perso\concourstwitter\TwitterAPI\obj\Release\netcoreapp2.1\TwitterAPI.dll
+E:\Développement\perso\concourstwitter\TwitterAPI\obj\Release\netcoreapp2.1\TwitterAPI.pdb

@@ -1,0 +1,155 @@
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\BotTwitter.simlpk
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll.config
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.pdb
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Hammock.ClientProfile.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\TweetSharp.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\log4net.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.pdb
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll.config
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.xml
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\log4net.xml
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.xml
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csprojAssemblyReference.cache
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csproj.CoreCompileInputs.cache
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csproj.CopyComplete
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.dll
+E:\Cloud\DropBox\Dropbox\Projets\Developpement\Applications (workingdir)\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.pdb
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\simlPkgTwitter.simlpk
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll.config
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.pdb
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Hammock.ClientProfile.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Jint.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Bot.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.EmotionML.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Log.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Oryzer.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Utilities.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.VA.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.WordNet.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\TweetSharp.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\log4net.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.pdb
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll.config
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Bot.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.EmotionML.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.VA.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\log4net.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.xml
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csprojAssemblyReference.cache
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csproj.CoreCompileInputs.cache
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csproj.CopyComplete
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.dll
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.pdb
+E:\Cloud\Dropbox\Projets\Developpement\Apps\TwitterConcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\twitterAppDB.sqlite
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\simlPkgTwitter.simlpk
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\twitterAppDB.sqlite
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll.config
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.pdb
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Hammock.ClientProfile.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Jint.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Bot.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.EmotionML.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Log.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Oryzer.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Utilities.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.VA.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.WordNet.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\TweetSharp.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\log4net.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.pdb
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll.config
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.xml
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.Bot.xml
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\Syn.EmotionML.xml
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\log4net.xml
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.xml
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csprojAssemblyReference.cache
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csproj.CoreCompileInputs.cache
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csproj.CopyComplete
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.dll
+G:\Projets\Developpement\apps\Projets perso\twitterconcours\ServiceConcoursTwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.pdb
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\simlPkgTwitter.simlpk
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\twitterAppDB.sqlite
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll.config
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\LibraryTweeterTests.pdb
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Hammock.ClientProfile.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Jint.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.Bot.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.EmotionML.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.Log.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.Oryzer.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.Utilities.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.VA.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.WordNet.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\TweetSharp.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\log4net.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.Oryzer.Workspace.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.pdb
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\LibraryTweeter.dll.config
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Newtonsoft.Json.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.Bot.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.EmotionML.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\log4net.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\System.Data.SQLite.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\bin\Debug\Syn.Oryzer.Workspace.xml
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csprojAssemblyReference.cache
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.csproj.CopyComplete
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.dll
+E:\SynologyDrive\Projets\Developpement\apps\Projets perso\concourstwitter\LibraryTweeterTests\obj\Debug\LibraryTweeterTests.pdb

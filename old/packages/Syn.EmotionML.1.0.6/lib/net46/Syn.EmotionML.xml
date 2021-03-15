@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syn.EmotionML</name>
+    </assembly>
+    <members>
+        <member name="T:Syn.EmotionML.ActionTendency">
+            <summary>
+            A class that describes an emotion or a related state according to an emotion action tendency vocabulary.
+            </summary>
+        </member>
+        <member name="P:Syn.EmotionML.ActionTendency.ActionTendencyFrijda">
+            <summary>
+            Gets Frijda's action tendencies vocabulary URI
+            </summary>
+        </member>
+        <member name="M:Syn.EmotionML.ActionTendency.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Syn.EmotionML.ActionTendency"/>
+            </summary>
+            <param name="name">The name of the action tendency.</param>
+        </member>
+        <member name="M:Syn.EmotionML.ActionTendency.#ctor(System.String,System.Nullable{System.Double})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syn.EmotionML.ActionTendency"/> class.
+            </summary>
+            <param name="name">The name of the action tendency.</param>
+            <param name="value">The static scale value which must be a floating point value from the closed interval [0, 1].</param>
+        </member>
+        <member name="M:Syn.EmotionML.ActionTendency.#ctor(System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syn.EmotionML.ActionTendency"/> class.
+            </summary>
+            <param name="name">The name of the action tendency.</param>
+            <param name="value">The static scale value which must be a floating point value from the closed interval [0, 1].</param>
+            <param name="confidence">The annotator's confidence that the annotation given for this action tendency is correct.</param>
+        </member>
+        <member name="T:Syn.EmotionML.Appraisal">
+            <summary>
+            A class that describes an emotion or a related state according to an emotion appraisal vocabulary.
+            </summary>
+        </member>
+        <member name="P:Syn.EmotionML.Appraisal.AppraisalEma">
+            <summary>
+            Gets the EMA appraisals vocabulary URI
+            </summary>
+        </member>
+        <member name="P:Syn.EmotionML.Appraisal.AppraisalOcc">
+            <summary>
+            Gets the OCC appraisals vocabulary URI
+            </summary>
+        </member>
+        <member name="P:Syn.EmotionML.Appraisal.AppraisalScherer">
+            <summary>
+            Gets the Scherer's appraisals vocabulary URI
+            </summary>
+        </member>
+        <member name="M:Syn.EmotionML.Appraisal.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syn.EmotionML.Appraisal"/> class.
+            </summary>
+            <param name="name">The name of the appraisal, which must be contained in the declared appraisal vocabulary.</param>
+        </member>
+        <member name="M:Syn.EmotionML.Appraisal.#ctor(System.String,System.Nullable{System.Double})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syn.EmotionML.Appraisal"/> class.
+            </summary>
+            <param name="name">The name of the appraisal, which must be contained in the declared appraisal vocabulary.</param>
+            <param name="value">The static scale value which must be a floating point value from the closed interval [0, 1].</param>
+        </member>
+        <member name="M:Syn.EmotionML.Appraisal.#ctor(System.String,System.Nullable{System.Double},System.Nullable{System.Double})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syn.EmotionML.Appraisal"/> class.
+            </summary>
+            <param name="name">The name of the appraisal, which must be contained in the declared appraisal vocabulary.</param>
+            <param name="value">
