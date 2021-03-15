@@ -204,6 +204,9 @@ namespace ConcoursTwitter.Core
 
                 retweetBusiness.Purge();
                 //synBotManager.SanitizeBot();
+
+                // WAIT 15 minutes before start another search
+                Thread.Sleep(900000);   
             }
         }
 

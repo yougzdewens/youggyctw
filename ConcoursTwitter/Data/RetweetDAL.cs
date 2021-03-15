@@ -21,7 +21,7 @@ namespace ConcoursTwitter.Data
 		/// </summary>
 		internal void Purge()
 		{
-			dbManager.InsertOrDelete(string.Format("DELETE FROM T_Retweets WHERE DateInserted < CAST ('{0}' AS datetime)", DateTime.Now.AddDays(-90)));
+			dbManager.InsertOrDelete("DELETE FROM T_Retweets WHERE DateInserted < DATEADD (DAY , -90 , getDate())");
 		}
 
 		/// <summary>
