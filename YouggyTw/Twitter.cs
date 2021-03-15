@@ -273,6 +273,7 @@ namespace YouggyTw
                 else if ((int)((HttpWebResponse)ex.Response).StatusCode == 403)
                 {
                     LogTools.WriteLog("Erreur 403 pour l'adresse : " + address);
+                    return default(T);
                 }
                 else
                 {
