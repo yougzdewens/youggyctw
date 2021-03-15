@@ -339,3 +339,4 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /ConcoursTwitter/Properties/launchSettingsTest.json
+/ConcoursTwitter/Properties/launchSettings.json
