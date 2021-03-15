@@ -1624,11 +1624,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Développement\\perso\\concourstwitter\\ConcoursTwitter\\ConcoursTwitter.csproj",
-      "projectName": "ConcoursTwitter",
-      "projectPath": "E:\\Développement\\perso\\concourstwitter\\ConcoursTwitter\\ConcoursTwitter.csproj",
+      "projectUniqueName": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\ConcoursTwitter\\YouggyCtw.csproj",
+      "projectName": "YouggyCtw",
+      "projectPath": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\ConcoursTwitter\\YouggyCtw.csproj",
       "packagesPath": "C:\\Users\\Hugues\\.nuget\\packages\\",
-      "outputPath": "E:\\Développement\\perso\\concourstwitter\\ConcoursTwitter\\obj\\",
+      "outputPath": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\ConcoursTwitter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1652,8 +1652,8 @@
         "netcoreapp2.0": {
           "targetAlias": "netcoreapp2.0",
           "projectReferences": {
-            "E:\\Développement\\perso\\concourstwitter\\YouggyTw\\YouggyTw.csproj": {
-              "projectPath": "E:\\Développement\\perso\\concourstwitter\\YouggyTw\\YouggyTw.csproj"
+            "E:\\Développement\\perso\\concourstwitter\\youggyctw\\YouggyTw\\YouggyTw.csproj": {
+              "projectPath": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\YouggyTw\\YouggyTw.csproj"
             }
           }
         }

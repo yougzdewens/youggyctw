@@ -3,21 +3,21 @@
 #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
 #For more information, please see https://aka.ms/containercompat
 
-FROM mcr.microsoft.com/dotnet/core/runtime:1.1 AS base
+FROM microsoft/aspnetcore:2.0 AS base
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/core/sdk:1.1 AS build
+FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
-COPY ["ConcoursTwitter/ConcoursTwitter.csproj", "ConcoursTwitter/"]
-RUN dotnet restore "ConcoursTwitter/ConcoursTwitter.csproj"
+COPY ["ConcoursTwitter/YouggyCtw.csproj", "ConcoursTwitter/"]
+RUN dotnet restore "ConcoursTwitter/YouggyCtw.csproj"
 COPY . .
 WORKDIR "/src/ConcoursTwitter"
-RUN dotnet build "ConcoursTwitter.csproj" -c Release -o /app/build
+RUN dotnet build "YouggyCtw.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ConcoursTwitter.csproj" -c Release -o /app/publish
+RUN dotnet publish "YouggyCtw.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ConcoursTwitter.dll"]
+ENTRYPOINT ["dotnet", "YouggyCtw.dll"]

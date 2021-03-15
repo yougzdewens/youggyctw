@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>ConcoursTwitter</ActiveDebugProfile>
-    <_LastSelectedProfileId>C:\Users\Hugues\source\repos\ConcoursTwitter\ConcoursTwitter\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+    <_LastSelectedProfileId>E:\Développement\perso\concourstwitter\youggyctw\ConcoursTwitter\Properties\PublishProfiles\registry.hub.docker.com_huguesdehen.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

@@ -744,11 +744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Développement\\perso\\concourstwitter\\YouggyTw\\YouggyTw.csproj",
+      "projectUniqueName": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\YouggyTw\\YouggyTw.csproj",
       "projectName": "YouggyTw",
-      "projectPath": "E:\\Développement\\perso\\concourstwitter\\YouggyTw\\YouggyTw.csproj",
+      "projectPath": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\YouggyTw\\YouggyTw.csproj",
       "packagesPath": "C:\\Users\\Hugues\\.nuget\\packages\\",
-      "outputPath": "E:\\Développement\\perso\\concourstwitter\\YouggyTw\\obj\\",
+      "outputPath": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\YouggyTw\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

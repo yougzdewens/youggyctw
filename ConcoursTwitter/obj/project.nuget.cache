@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pp7f3/DqFDJ+0mSEfMjuqq4NTL9Kt+NT82uzCfOkS/jsyjVPTXGWolnfXOnpF9P60hjPFjsBXtN/rE4OSsZttg==",
+  "dgSpecHash": "9E5Cf0nwI5Iv3mii7YHaLT0oJdd2SIaWO7HSqKmf9/8zpY3b14l5xCQtj9JuXvzXAC6z7zlpxDKWAco3S9UoWA==",
   "success": true,
-  "projectFilePath": "E:\\Développement\\perso\\concourstwitter\\ConcoursTwitter\\ConcoursTwitter.csproj",
+  "projectFilePath": "E:\\Développement\\perso\\concourstwitter\\youggyctw\\ConcoursTwitter\\YouggyCtw.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hugues\\.nuget\\packages\\microsoft.netcore.app\\2.0.0\\microsoft.netcore.app.2.0.0.nupkg.sha512",
     "C:\\Users\\Hugues\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.0.0\\microsoft.netcore.dotnetapphost.2.0.0.nupkg.sha512",
