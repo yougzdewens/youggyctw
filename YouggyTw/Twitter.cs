@@ -170,10 +170,10 @@ namespace YouggyTw
         /// <param name="tweetFromFriend">The tweet from friend.</param>
         public void LikeATweet(Tweet tweetFromFriend)
         {
-            string url = "https://api.twitter.com/1.1/favorites/create.json";
+            string url = "https://api.twitter.com/1.1/favorites/create.json?id=" + tweetFromFriend.Id;
 
             Dictionary<string, object> queryParameters = new Dictionary<string, object>();
-            queryParameters.Add("id", tweetFromFriend.Id);
+            //queryParameters.Add("id", tweetFromFriend.Id);
 
             // TODO FIND THE GOOD OBJECT
             string returnTest = TwitterApiCall<string>(url, NameRequestTwitterAPI.RetweetOrUpdate, HTTPVerb.POST, queryParameters);
@@ -186,7 +186,7 @@ namespace YouggyTw
         /// <param name="status">The status.</param>
         public void Reply(Tweet tweetFromFriend, string status)
         {
-            string url = "https://api.twitter.com/1.1/statuses/update.json";
+            string url = "https://api.twitter.com/1.1/statuses/update.json?status=" + status + "&in_reply_to_status_id="+ tweetFromFriend.Id;
 
             Dictionary<string, object> queryParameters = new Dictionary<string, object>();
             queryParameters.Add("status", status);
@@ -202,12 +202,12 @@ namespace YouggyTw
         /// <param name="twitterMention">The twitter mention.</param>
         public void AddFriends(UserMention twitterMention)
         {
-            //string url = "https://api.twitter.com/1.1/friendships/create.json?user_id="+ twitterMention.Id + "&follow=true";
-            string url = "https://api.twitter.com/1.1/friendships/create.json";
+            string url = "https://api.twitter.com/1.1/friendships/create.json?user_id="+ twitterMention.Id + "&follow=true";
+            //string url = "https://api.twitter.com/1.1/friendships/create.json";
 
             Dictionary<string, object> queryParameters = new Dictionary<string, object>();
-            queryParameters.Add("user_id", twitterMention.Id);
-            queryParameters.Add("follow", "true");
+            //queryParameters.Add("user_id", twitterMention.Id);
+            //queryParameters.Add("follow", "true");
 
             //TODO FIND THE GOOD OBJECT
             string returnTest = TwitterApiCall<string>(url, NameRequestTwitterAPI.RetweetOrUpdate, HTTPVerb.POST, queryParameters);

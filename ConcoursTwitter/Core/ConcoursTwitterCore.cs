@@ -206,6 +206,7 @@ namespace ConcoursTwitter.Core
                 //synBotManager.SanitizeBot();
 
                 // WAIT 15 minutes before start another search
+                LogTools.WriteLog("fin de recherche, attente de 15 minutes");
                 Thread.Sleep(900000);   
             }
         }
