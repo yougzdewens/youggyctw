@@ -270,6 +270,10 @@ namespace YouggyTw
                     Thread.Sleep(TimeOutBeforeRequest * 1000 * 60);
                     return TwitterApiCall<T>(address, requestTwitter, verb, queryParameters, multipart);
                 }
+                else if ((int)((HttpWebResponse)ex.Response).StatusCode == 403)
+                {
+                    LogTools.WriteLog("Erreur 403 pour l'adresse : " + address);
+                }
                 else
                 {
                     throw;
