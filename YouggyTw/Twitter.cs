@@ -48,20 +48,32 @@ namespace YouggyTw
             /// The verify credential
             /// </summary>
             VerifyCredential,
+
             /// <summary>
             /// The friend list
             /// </summary>
             FriendList,
+
             /// <summary>
             /// The get user timeline
             /// </summary>
             GetUserTimeline,
+
             /// <summary>
             /// The retweet or update
             /// </summary>
             RetweetOrUpdate,
 
-            DeleteFriend
+            /// <summary>
+            /// The delete friend
+            /// </summary>
+            DeleteFriend,
+
+            MentionTimeline,
+
+            SendDirectMessage,
+
+            GetDirectMessage
         }
 
         /// <summary>
@@ -78,6 +90,7 @@ namespace YouggyTw
 
             limitManagerList = CreateLimitManagerList();
         }
+
         public void DeleteFriend(long userId)
         {
             string url = "https://api.twitter.com/1.1/friendships/destroy.json?user_id=" + userId;
@@ -90,6 +103,13 @@ namespace YouggyTw
 
             //OAuthYouggy oay = new OAuthYouggy(consumerKey, consumerSecret, access_token, access_token_secret);
             string returnTest = TwitterApiCall<string>(url, NameRequestTwitterAPI.RetweetOrUpdate, HTTPVerb.POST, parameters);
+        }
+
+        public List<MentionTimeline> GetTweetMentioningMe()
+        {
+            string url = "https://api.twitter.com/1.1/statuses/mentions_timeline.json";
+
+            return TwitterApiCall<MentionTimeline[]>(url, NameRequestTwitterAPI.MentionTimeline, HTTPVerb.GET, new Dictionary<string, object>()).ToList();
         }
 
         /// <summary>
@@ -147,6 +167,35 @@ namespace YouggyTw
 
             Users friends = TwitterApiCall<Users>(url, NameRequestTwitterAPI.FriendList, HTTPVerb.GET, new Dictionary<string, object>());
             return new Tuple<List<User>, long>(friends.UserList, friends.NextCursor);       
+        }
+
+        public List<EventTwitter> GetAllDirectMessages(string lastDirectMessage)
+        {
+            Tuple<List<EventTwitter>, long> eventsAndCursor = GetDirectMessages();
+            List<EventTwitter> events = new List<EventTwitter>();
+
+            events.AddRange(eventsAndCursor.Item1);
+
+            while (eventsAndCursor.Item2 > 0)
+            {
+                eventsAndCursor = GetDirectMessages(eventsAndCursor.Item2);
+                events.AddRange(eventsAndCursor.Item1);
+            }
+
+            if (!string.IsNullOrEmpty(lastDirectMessage))
+            {
+                events = events.OrderBy(x => x.Id).Where(x => x.Id > long.Parse(lastDirectMessage)).ToList();
+            }          
+
+            return events;
+        }
+
+        public Tuple<List<EventTwitter>, long> GetDirectMessages(long nextCursor = 0)
+        {
+            string url = "https://api.twitter.com/1.1/direct_messages/events/list.json" + (nextCursor > 0 ? "?cursor=" + nextCursor : string.Empty);
+
+            EventsTwitter eventsTwitter = TwitterApiCall<EventsTwitter>(url, NameRequestTwitterAPI.GetDirectMessage, HTTPVerb.GET, new Dictionary<string, object>());
+            return new Tuple<List<EventTwitter>, long>(eventsTwitter.Events, eventsTwitter.NextCursor);
         }
 
         /// <summary>
@@ -220,15 +269,21 @@ namespace YouggyTw
         /// <param name="address">The address.</param>
         /// <param name="requestTwitter">The request twitter.</param>
         /// <returns></returns>
-        private T TwitterApiCall<T>(string address, NameRequestTwitterAPI requestTwitter, HTTPVerb verb, Dictionary<string, object> queryParameters, bool multipart = false)
+        private T TwitterApiCall<T>(string address, NameRequestTwitterAPI requestTwitter, HTTPVerb verb, Dictionary<string, object> queryParameters, bool multipart = false, string data = "")
         {
             try
             {
                 limitManagerList[requestTwitter].AddCall();
 
-                Uri uri = new Uri(address.Replace("http://", "https://"));
+                Uri uri = new Uri(address.Replace("http://", "https://"));               
 
                 WebRequestBuilder requestBuilder = new WebRequestBuilder(uri, verb, oAuthTokens) { Multipart = multipart };
+
+                if (data != string.Empty)
+                {
+                    Encoding encoding = new UTF8Encoding();
+                    requestBuilder.DataInByte = encoding.GetBytes(data);
+                }
 
                 foreach (var item in queryParameters)
                 {
@@ -285,6 +340,31 @@ namespace YouggyTw
                 throw;
             }
         }
+
+        public bool SendDirectMessage(long id, string text)
+        {
+            string url = "https://api.twitter.com/1.1/direct_messages/events/new.json";
+
+            EventTwitter eventTwitter = new EventTwitter();
+            eventTwitter.Type = "message_create";
+            eventTwitter.MessageCreate.Target.RecipientId = id.ToString();
+            eventTwitter.MessageCreate.MessageData.Text = text;
+
+            Dictionary<string, object> queryParameters = new Dictionary<string, object>();
+            string data = "{\"event\" :" + JsonConvert.SerializeObject(eventTwitter) + "}";
+
+            //TODO FIND THE GOOD OBJECT
+            string returnTest = TwitterApiCall<string>(url, NameRequestTwitterAPI.SendDirectMessage, HTTPVerb.POST, queryParameters, false, data); ;
+
+            return true;
+
+            //Dictionary<string, object> queryParameters = new Dictionary<string, object>();
+
+            //string url = "https://api.twitter.com/1.1/direct_messages/new.json?user_id="+id+"&text=some message";
+            //string returnTest = TwitterApiCall<string>(url, NameRequestTwitterAPI.SendDirectMessage, HTTPVerb.POST, queryParameters);
+
+            //return true;
+        }        
 
         ///// <summary>
         ///// Twitters the API post call.
@@ -377,6 +457,25 @@ namespace YouggyTw
             );
 
             limitManagerList.Add(NameRequestTwitterAPI.DeleteFriend, new LimitManager(
+                new List<Tuple<int, int>>() {
+                    new Tuple<int, int>(15, 15)
+                })
+            );
+
+            limitManagerList.Add(NameRequestTwitterAPI.SendDirectMessage, new LimitManager(
+                new List<Tuple<int, int>>() {
+                    new Tuple<int, int>(1000, 1440)
+                })
+            );            
+
+            limitManagerList.Add(NameRequestTwitterAPI.MentionTimeline, new LimitManager(
+                new List<Tuple<int, int>>() {
+                    new Tuple<int, int>(75, 15),
+                    new Tuple<int, int>(100000, 1440)
+                })
+            );
+
+            limitManagerList.Add(NameRequestTwitterAPI.GetDirectMessage, new LimitManager(
                 new List<Tuple<int, int>>() {
                     new Tuple<int, int>(15, 15)
                 })

@@ -14,6 +14,14 @@ namespace ConcoursTwitter.Tools
             }
         }
 
+        public static string PathOfSimlPackage
+        {
+            get
+            {
+                return Environment.GetEnvironmentVariable("PATHOFSIMLPACKAGE");
+            }
+        }
+
         public static string ResetMode
         {
             get

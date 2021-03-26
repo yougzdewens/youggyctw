@@ -42,13 +42,16 @@ namespace ConcoursTwitter.Core
         /// <summary>
         /// The syn bot manager
         /// </summary>
-        //private SynBotManager synBotManager = new SynBotManager();
+        private YouggyCtw.Externals.SynBotManager synBotManager = new YouggyCtw.Externals.SynBotManager();
 
         /// <summary>
         /// The friends business
         /// </summary>
         private FriendsBusiness friendsBusiness = new FriendsBusiness();
 
+        /// <summary>
+        /// The friends added business
+        /// </summary>
         private FriendsAddedBusiness friendsAddedBusiness = new FriendsAddedBusiness();
 
         /// <summary>
@@ -88,6 +91,10 @@ namespace ConcoursTwitter.Core
 
             idUser = twitter.VerifyCredentials().Id;
 
+            //twitter.GetDirectMessage();
+            //twitter.SendDirectMessage(1204068156274290688, "heyyy !");
+
+
             concoursTwitterCoreFriends = new ConcoursTwitterCoreFriends(twitter);
 
             if (ConfigurationTools.ResetMode == "true")
@@ -123,62 +130,62 @@ namespace ConcoursTwitter.Core
         //    }
         //}
 
-        ///// <summary>
-        ///// Starts the search direct message.
-        ///// </summary>
-        //private void StartSearchDirectMessage()
-        //{
-        //    while (true)
-        //    {
-        //        try
-        //        {
-        //            SearchDirectMessage();
-        //            Waiting(1);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            LogTools.WriteLog("erreur StartSearchDirectMessage");
-        //            LogTools.WriteLog(ex.ToString());
-        //            Waiting(5);
-        //        }
-        //    }
-        //}
+        /// <summary>
+        /// Starts the search direct message.
+        /// </summary>
+        private void StartSearchDirectMessage()
+        {
+            while (true)
+            {
+                try
+                {
+                    SearchDirectMessage();
+                    Thread.Sleep(60000);
+                }
+                catch (Exception ex)
+                {
+                    LogTools.WriteLog("erreur StartSearchDirectMessage");
+                    LogTools.WriteLog(ex.ToString());
+                    Thread.Sleep(300000);
+                }
+            }
+        }
 
-        ///// <summary>
-        ///// Starts the search citation.
-        ///// </summary>
-        //private void StartSearchCitation()
-        //{
-        //    bool isFirstLaunch = false;
+        /// <summary>
+        /// Starts the search citation.
+        /// </summary>
+        private void StartSearchCitation()
+        {
+            bool isFirstLaunch = false;
 
-        //    while (true)
-        //    {
-        //        try
-        //        {
-        //            SearchCitation(isFirstLaunch);
-        //            Waiting(5);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            LogTools.WriteLog("erreur StartSearchCitation");
-        //            LogTools.WriteLog(ex.ToString());
-        //            Waiting(5);
-        //        }
+            while (true)
+            {
+                try
+                {
+                    SearchCitation(isFirstLaunch);
+                    Thread.Sleep(300000);
+                }
+                catch (Exception ex)
+                {
+                    LogTools.WriteLog("erreur StartSearchCitation");
+                    LogTools.WriteLog(ex.ToString());
+                    Thread.Sleep(300000);
+                }
 
-        //        isFirstLaunch = false;
-        //    }
-        //}
+                isFirstLaunch = false;
+            }
+        }
 
         public void StartAll()
         {
             Task task1 = Task.Factory.StartNew(() => { StartCycle(); });
-            //Task task2 = Task.Factory.StartNew(() => { StartSearchCitation(); });
-            //Task task3 = Task.Factory.StartNew(() => { StartSearchDirectMessage(); });
+            Task task2 = Task.Factory.StartNew(() => { StartSearchCitation(); });
+            Task task3 = Task.Factory.StartNew(() => { StartSearchDirectMessage(); });
 
 
             task1.Wait();
-            //task2.Wait();
-            //task3.Wait();
+            task2.Wait();
+            task3.Wait();
             LogTools.WriteLog("Fin des tâches");
 
             friendsBusiness = new FriendsBusiness();
@@ -224,42 +231,43 @@ namespace ConcoursTwitter.Core
             retweetBusiness.DeleteALL();
         }
 
-        ///// <summary>
-        ///// Searches the direct message.
-        ///// </summary>
-        //private void SearchDirectMessage()
-        //{
-        //    long? lastId = messageBusiness.GetLastMessage();
-        //    Messages tweets = twitterManager.GetDirectMessageReceived(lastId);
+        /// <summary>
+        /// Searches the direct message.
+        /// </summary>
+        private void SearchDirectMessage()
+        {
+            long? lastId = messageBusiness.GetLastMessage();
+            string lastIdStr = lastId.HasValue ? lastId.Value.ToString() : null;
+            
+            List<EventTwitter> messages = twitter.GetAllDirectMessages(lastIdStr);
+            if (messages != null)
+            {
+                foreach (EventTwitter message in messages.Where(x => x.MessageCreate.SenderId != idUser.ToString() && JavaTimeStampToDateTime(double.Parse(x.CreatedTimestamp)) > DateTime.Now.AddMinutes(-5)))
+                {
+                    if (!messageBusiness.IsMessageExistWithIdMessageTwitter(message.Id))
+                    {
+                        string responseText = synBotManager.GetResponseFromBot(long.Parse(message.MessageCreate.SenderId), message.MessageCreate.MessageData.Text);
 
-        //    if (tweets != null)
-        //    {
-        //        foreach (Event tweet in tweets.Events.Where(x => x.MessageCreate.SenderId != idUser.ToString() && JavaTimeStampToDateTime(double.Parse(x.CreatedTimestamp)) > DateTime.Now.AddMinutes(-5)))
-        //        {
-        //            if (!messageBusiness.IsMessageExistWithIdMessageTwitter(long.Parse(tweet.Id)))
-        //            {
-        //                string responseText = synBotManager.GetResponseFromBot(long.Parse(tweet.MessageCreate.SenderId), tweet.MessageCreate.MessageData.Text);
+                        if (responseText != string.Empty)
+                        {
+                            bool isSent = twitter.SendDirectMessage(long.Parse(message.MessageCreate.SenderId), responseText);
 
-        //                if (responseText != string.Empty)
-        //                {
-        //                    bool isSent = twitterManager.SendDirectMessage(long.Parse(tweet.MessageCreate.SenderId), responseText);
+                            if (isSent)
+                            {
+                                MessageModel messageModel = new MessageModel();
+                                messageModel.IdMessageTweeter = message.Id;
+                                messageModel.Text = SqlTools.SanitizeForSql(message.MessageCreate.MessageData.Text);
+                                messageModel.IdTwitterFriend = long.Parse(message.MessageCreate.SenderId);
+                                messageModel.Date = DateTime.Now;
+                                messageModel.Response = SqlTools.SanitizeForSql(responseText);
 
-        //                    if (isSent)
-        //                    {
-        //                        MessageModel message = new MessageModel();
-        //                        message.IdMessageTweeter = long.Parse(tweet.Id);
-        //                        message.Text = SqlTool.SanitizeForSql(tweet.MessageCreate.MessageData.Text);
-        //                        message.IdTwitterFriend = long.Parse(tweet.MessageCreate.SenderId);
-        //                        message.Date = DateTime.Now;
-        //                        message.Response = SqlTool.SanitizeForSql(responseText);
-
-        //                        messageBusiness.Save(message);
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
+                                messageBusiness.Save(messageModel);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         public DateTime JavaTimeStampToDateTime(double javaTimeStamp)
         {
@@ -269,40 +277,40 @@ namespace ConcoursTwitter.Core
             return dtDateTime;
         }
 
-        ///// <summary>
-        ///// Searches the citation.
-        ///// </summary>
-        ///// <param name="isFirstLaunch">if set to <c>true</c> [is first launch].</param>
-        //private void SearchCitation(bool isFirstLaunch = false)
-        //{
-        //    List<TwitterStatus> tweets = twitterManager.GetTweetsMentionningMe();
+        /// <summary>
+        /// Searches the citation.
+        /// </summary>
+        /// <param name="isFirstLaunch">if set to <c>true</c> [is first launch].</param>
+        private void SearchCitation(bool isFirstLaunch = false)
+        {
+            List<MentionTimeline> mentions = twitter.GetTweetMentioningMe();
 
-        //    foreach (TwitterStatus tweet in tweets)
-        //    {
-        //        List<List<string>> listOfListWords = new List<List<string>>();
-        //        listOfListWords.Add(new List<string>() { " dm", "remport" });
-        //        listOfListWords.Add(new List<string>() { " mp", "remport" });
-        //        listOfListWords.Add(new List<string>() { " mp", "gagn" });
-        //        listOfListWords.Add(new List<string>() { "message", "priv", "gagn" });
+            foreach (MentionTimeline mention in mentions)
+            {
+                List<List<string>> listOfListWords = new List<List<string>>();
+                listOfListWords.Add(new List<string>() { " dm", "remport" });
+                listOfListWords.Add(new List<string>() { " mp", "remport" });
+                listOfListWords.Add(new List<string>() { " mp", "gagn" });
+                listOfListWords.Add(new List<string>() { "message", "priv", "gagn" });
 
-        //        string contentToTest = tweet.FullText != null ? tweet.FullText : tweet.Text;
+                string contentToTest = mention.Text != null ? mention.Text : mention.Text;
 
-        //        if (!citationBusiness.IsCitationExist(tweet.Id))
-        //        {
-        //            if (!isFirstLaunch && StringTool.TestIfContainsWord(contentToTest, listOfListWords, true))
-        //            {
-        //                bool isSent = twitterManager.SendDirectMessage(tweets.First().User.Id, "Salut, visiblement j'ai peut être gagné, tu voulais me voir en MP ? :)");
+                if (!citationBusiness.IsCitationExist(mention.Id))
+                {
+                    if (!isFirstLaunch && StringTools.TestIfContainsWord(contentToTest, listOfListWords, true))
+                    {
+                        bool isSent = twitter.SendDirectMessage(mention.User.Id, "Salut, visiblement j'ai peut être gagné, tu voulais me voir en MP ? :)");
 
-        //                if (isSent)
-        //                {
-        //                    synBotManager.SendMessageToTheChat(tweet.User.Id, contentToTest);
-        //                }
-        //            }
+                        if (isSent)
+                        {
+                            synBotManager.SendMessageToTheChat(mention.User.Id, contentToTest);
+                        }
+                    }
 
-        //            citationBusiness.Save(tweet);
-        //        }
-        //    }
-        //}
+                    citationBusiness.Save(new CitationModel() { Date = DateTime.Now, Text = mention.Text, IdTweet = mention.Id, IdTwitterFriend = mention.User.Id });
+                }
+            }
+        }
 
         /// <summary>
         /// Searches the concours from our contacts.

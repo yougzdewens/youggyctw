@@ -82,6 +82,8 @@ namespace YouggyTw
         /// <value>The Basic Auth Credentials.</value>
         private readonly NetworkCredential networkCredentials;
 
+        public byte[] DataInByte { get; set; }
+
         /// <summary>
         /// Gets or sets the Multipart config
         /// </summary>
@@ -194,31 +196,7 @@ namespace YouggyTw
         {
             HttpWebRequest request = PrepareRequest();
 
-#if !SILVERLIGHT
             return (HttpWebResponse)request.GetResponse();
-#else
-            request.AllowReadStreamBuffering = true;
-            HttpWebResponse response = null;
-            AutoResetEvent alldone = new AutoResetEvent(false);
-            request.BeginGetResponse(param =>
-            {
-                HttpWebRequest req = (HttpWebRequest)param.AsyncState;
-                try
-                {
-                    response = (HttpWebResponse)req.EndGetResponse(param);
-                }
-                catch (WebException we)
-                {
-                    response = (HttpWebResponse)we.Response;
-                }
-                finally
-                {
-                    alldone.Set();
-                }
-            }, request);
-            alldone.WaitOne();
-            return response;
-#endif
         }
 
         /// <summary>
@@ -269,6 +247,10 @@ namespace YouggyTw
 
             request.ContentLength = Multipart ? ((formData != null) ? formData.Length : 0) : 0;
 
+            if (DataInByte != null)
+            {
+                request.ContentLength = DataInByte.Length;
+            }
 
             request.UserAgent = (string.IsNullOrEmpty(userAgent)) ? string.Format(CultureInfo.InvariantCulture, "Twitterizer/{0}", System.Reflection.Assembly.GetExecutingAssembly().GetName().Version) : userAgent;
 
@@ -285,11 +267,20 @@ namespace YouggyTw
                 request.ContentType = contentType;
 
                 using (Stream requestStream = request.GetRequestStream())
-
                 {
                     if (formData != null)
                     {
                         requestStream.Write(formData, 0, formData.Length);
+                    }
+                }
+            }
+            else
+            {
+                if (DataInByte != null)
+                {
+                    using (Stream requestStream = request.GetRequestStream())
+                    {
+                        requestStream.Write(DataInByte, 0, DataInByte.Length);
                     }
                 }
             }

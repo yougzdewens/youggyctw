@@ -8,7 +8,7 @@ namespace ConcoursTwitter.Model
 {
 	public class CitationModel
 	{
-		public int IdCitation { get; set; }
+		public long IdCitation { get; set; }
 
 		public string Text { get; set; }
 
