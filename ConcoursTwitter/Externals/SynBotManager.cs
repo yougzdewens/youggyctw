@@ -19,7 +19,7 @@ namespace YouggyCtw.Externals
 		/// <summary>
 		/// The path of siml package
 		/// </summary>
-		private string pathOfSimlPackage = ConfigurationTools.PathOfSimlPackage;
+		private string pathOfSimlPackage = "./simlPkgTwitter.simlpk";
 		#endregion
 
 		/// <summary>
