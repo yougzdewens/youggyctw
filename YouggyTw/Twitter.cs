@@ -287,7 +287,10 @@ namespace YouggyTw
 
                 foreach (var item in queryParameters)
                 {
-                    requestBuilder.Parameters.Add(item.Key, item.Value);
+                    if (!requestBuilder.Parameters.ContainsKey(item.Key))
+                    {
+                        requestBuilder.Parameters.Add(item.Key, item.Value);
+                    }
                 }
 
                 HttpWebResponse response = requestBuilder.ExecuteRequest();
