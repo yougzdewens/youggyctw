@@ -178,13 +178,13 @@ namespace ConcoursTwitter.Core
 
         public void StartAll()
         {
-            //Task task1 = Task.Factory.StartNew(() => { StartCycle(); });
-            //Task task2 = Task.Factory.StartNew(() => { StartSearchCitation(); });
+            Task task1 = Task.Factory.StartNew(() => { StartCycle(); });
+            Task task2 = Task.Factory.StartNew(() => { StartSearchCitation(); });
             Task task3 = Task.Factory.StartNew(() => { StartSearchDirectMessage(); });
 
 
-            //task1.Wait();
-            //task2.Wait();
+            task1.Wait();
+            task2.Wait();
             task3.Wait();
             LogTools.WriteLog("Fin des tâches");
 
