@@ -33,7 +33,7 @@ namespace ConcoursTwitter.Data
 		/// <param name="citationModel">The citation model.</param>
 		internal void Save(CitationModel citationModel)
 		{
-			dbManager.InsertOrDelete(string.Format("Insert into T_Citations (Text, IdTwitterFriend, Date, IdTweet) VALUES ('{0}', {1}, '{2}', {3})", citationModel.Text, citationModel.IdTwitterFriend, citationModel.Date.ToString("yyyy-MM-dd HH:mm:ss.fffffff"), citationModel.IdTweet));
+			dbManager.InsertOrDelete(string.Format("Insert into T_Citations (Text, IdTwitterFriend, Date, IdTweet) VALUES ('{0}', {1}, '{2}', {3})", SqlTools.SanitizeForSql(citationModel.Text), citationModel.IdTwitterFriend, citationModel.Date.ToString("yyyy-MM-dd HH:mm:ss.fffffff"), citationModel.IdTweet));
 		}
 
 		/// <summary>
