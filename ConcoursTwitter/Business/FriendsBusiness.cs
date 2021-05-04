@@ -86,7 +86,7 @@ namespace ConcoursTwitter.Business
 		/// Gets all.
 		/// </summary>
 		/// <returns></returns>
-		internal List<FriendsModel> GetAll()
+		internal List<FriendsModel> GetAll(List<YouggyTw.Model.User> twitterFriends)
 		{
 			List<FriendsModel> allFriends = new List<FriendsModel>();
 			List<FriendsModel> allFriendsAdded = new List<FriendsModel>();
@@ -120,8 +120,6 @@ namespace ConcoursTwitter.Business
 				friend.DateAdded = DateTime.Parse(friendInRow["DateAdded"].ToString());
 
 				allFriendsAdded.Add(friend);
-
-				LogTools.WriteLog(friend.Name + " trouvé");
 			}
 
 			if (lastDateFromTwitter != null)
@@ -137,7 +135,7 @@ namespace ConcoursTwitter.Business
 			{
 				LogTools.WriteLog("Récupération des utilisateurs sur twitter");
 
-				UpdateFriendsFromTwitter(allFriends, allFriendsAdded);
+				UpdateFriendsFromTwitter(allFriends, allFriendsAdded, twitterFriends);
 
 				if (lastDateFromTwitter == null)
 				{
@@ -146,7 +144,7 @@ namespace ConcoursTwitter.Business
 				else
 				{
 					lastDateFromTwitter = DateTime.Now;
-					return this.GetAll();
+					return this.GetAll(twitterFriends);
 				}
 
 				LogTools.WriteLog("Fin de Récupération des utilisateurs sur twitter");
@@ -161,37 +159,34 @@ namespace ConcoursTwitter.Business
 		/// Updates the friends from twitter.
 		/// </summary>
 		/// <param name="allFriends">All friends.</param>
-		private void UpdateFriendsFromTwitter(List<FriendsModel> allFriends, List<FriendsModel> allFriendsAdded)
+		private void UpdateFriendsFromTwitter(List<FriendsModel> allFriends, List<FriendsModel> allFriendsAdded, List<YouggyTw.Model.User> twitterFriends)
 		{
-			//LogTool.WriteLog("Get utilisateurs sur twitter");
-			//List<TwitterUser> twitterFriends = twitterManager.GetAllFriends();
+            LogTools.WriteLog("Fin de Get utilisateurs sur twitter ");
+            LogTools.WriteLog(twitterFriends.Count + " trouvé sur twitter");
 
-			//LogTool.WriteLog("Fin de Get utilisateurs sur twitter ");
-			//LogTool.WriteLog(twitterFriends.Count + " trouvé sur twitter");
+            foreach (YouggyTw.Model.User user in twitterFriends)
+            {
+                if (!allFriends.Select(f => f.IdTwitterFriend).Contains(user.Id) && !allFriendsAdded.Select(f => f.IdTwitterFriend).Contains(user.Id))
+                {
+                    LogTools.WriteLog(user.Name + " trouvé sur twitter");
 
-			//foreach (TwitterUser user in twitterFriends)
-			//{
-			//	if (!allFriends.Select(f => f.IdTwitterFriend).Contains(user.Id) && !allFriendsAdded.Select(f => f.IdTwitterFriend).Contains(user.Id))
-			//	{
-			//		LogTool.WriteLog(user.Name + " trouvé sur twitter");
+                    FriendsModel friendsToAdd = new FriendsModel();
+                    friendsToAdd.IdTwitterFriend = user.Id;
+                    friendsToAdd.DateAdded = DateTime.Now;
+                    friendsToAdd.Name = user.Name;
 
-			//		FriendsModel friendsToAdd = new FriendsModel();
-			//		friendsToAdd.IdTwitterFriend = user.Id;
-			//		friendsToAdd.DateAdded = DateTime.Now;
-			//		friendsToAdd.Name = user.Name;
+                    this.Save(friendsToAdd);
+                }
+            }
 
-			//		this.Save(friendsToAdd);
-			//	}
-			//}
+            List<FriendsModel> allFriendsDeleted = allFriends.Where(f => !twitterFriends.Select(tf => tf.Id).Contains(f.IdTwitterFriend)).ToList();
+            allFriendsDeleted = allFriendsDeleted.Where(f => !allFriendsAdded.Select(tf => tf.IdTwitterFriend).Contains(f.IdTwitterFriend)).ToList();
 
-			//List<FriendsModel> allFriendsDeleted = allFriends.Where(f => !twitterFriends.Select(tf => tf.Id).Contains(f.IdTwitterFriend)).ToList();
-			//allFriendsDeleted = allFriendsDeleted.Where(f => !allFriendsAdded.Select(tf => tf.IdTwitterFriend).Contains(f.IdTwitterFriend)).ToList();
-
-			//foreach (FriendsModel friend in allFriendsDeleted)
-			//{
-			//	this.Delete(friend.IdFriends);
-			//}
-		}
+            foreach (FriendsModel friend in allFriendsDeleted)
+            {
+                this.Delete(friend.IdFriends);
+            }
+        }
 
 		internal void DeleteALL()
 		{

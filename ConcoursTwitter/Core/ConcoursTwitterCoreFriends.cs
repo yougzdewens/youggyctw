@@ -54,8 +54,9 @@ namespace ConcoursTwitter.Core
                 // Start the timer
                 aTimer.Enabled = true;
 
-                FillUserAndUpdateDatabase();
-            });
+                // take user first time
+                EmptyAndRefillUser(null, null);
+            });           
 
             // Create a timer and set a 100 hour
             System.Timers.Timer aTimerCleaningTempFriends = new System.Timers.Timer();
@@ -138,33 +139,44 @@ namespace ConcoursTwitter.Core
             throw new NotImplementedException();
         }
 
-        private void FillUserAndUpdateDatabase()
+        private List<User> GetUserAndUpdateDatabase()
         {
-            FillUserList();
+            List<User> users = GetUserList();
 
-            foreach (User user in userList)
+            foreach (User user in users)
             {
                 if (!friendsBusiness.IsExist(user.Id) && !friendsAddedBusiness.IsExist(user.Id))
                 {
                     friendsBusiness.Save(new Model.FriendsModel() { DateAdded = DateTime.Now, IdTwitterFriend = user.Id, Name = user.ScreenName });
                 }                
             }
+
+            return users;
         }
 
         /// <summary>
         /// Fills the user list.
         /// </summary>
-        private void FillUserList()
+        private List<User> GetUserList()
         {
+            List<User> users = new List<User>();
+
             LogTools.WriteLog("GetFriends");
             Tuple<List<User>, long> usersAndCursor = GetFriendsAndCursor(0);
+
+            users = usersAndCursor.Item1;
 
             while (usersAndCursor.Item2 > 0)
             {
                 LogTools.WriteLog("GetFriends with cursor : " + usersAndCursor.Item2);
                 usersAndCursor = GetFriendsAndCursor(usersAndCursor.Item2);
+
+                users.AddRange(usersAndCursor.Item1);
             }
+
+            return users;
         }
+
         private void EmptyAndRefillUser(object sender, ElapsedEventArgs e)
         {
             while (userList.Count > 0)
@@ -173,7 +185,10 @@ namespace ConcoursTwitter.Core
                 userList.TryTake(out user);
             }
 
-            FillUserAndUpdateDatabase();
+            foreach (User user in GetUserAndUpdateDatabase())
+            {
+                userList.Add(user);
+            }
         }
 
         /// <summary>

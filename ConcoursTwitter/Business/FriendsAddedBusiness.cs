@@ -26,11 +26,6 @@ namespace ConcoursTwitter.Business
 		private FriendsAddedDAL friendsAddedDal = new FriendsAddedDAL();
 
 		/// <summary>
-		/// The last date from twitter
-		/// </summary>
-		private DateTime lastDateFromTwitter;
-
-		/// <summary>
 		/// The twitter manager
 		/// </summary>
 		//private TwitterManager twitterManager = new TwitterManager();
@@ -44,17 +39,16 @@ namespace ConcoursTwitter.Business
 		/// </returns>
 		internal bool IsExist(long idTwitterUser)
 		{
-			//DataTable isExistResult = friendsAddedDal.IsExist(idTwitterUser);
+            DataTable isExistResult = friendsAddedDal.IsExist(idTwitterUser);
 
-			//if (isExistResult.Rows.Count > 0)
-			//{
-			//	return true;
-			//}
-			//else
-			//{
-			//	return false;
-			//}
-			return false;
+            if (isExistResult.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 		}
 
 		/// <summary>

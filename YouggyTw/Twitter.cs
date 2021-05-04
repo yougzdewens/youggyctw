@@ -233,15 +233,16 @@ namespace YouggyTw
         /// </summary>
         /// <param name="tweetFromFriend">The tweet from friend.</param>
         /// <param name="status">The status.</param>
-        public void Reply(Tweet tweetFromFriend, string status)
+        public void Reply(string tweetId, string tweetUserId, string status)
         {
-            string url = "https://api.twitter.com/1.1/statuses/update.json?status=" + status + "&in_reply_to_status_id="+ tweetFromFriend.Id;
+            string url = "https://api.twitter.com/1.1/statuses/update.json";
 
             Dictionary<string, object> queryParameters = new Dictionary<string, object>();
             queryParameters.Add("status", status);
-            queryParameters.Add("in_reply_to_status_id", tweetFromFriend.Id);
+            queryParameters.Add("in_reply_to_status_id", tweetId);
+            queryParameters.Add("auto_populate_reply_metadata", "true");
+            queryParameters.Add("exclude_reply_user_ids", tweetUserId);
 
-            //TODO FIND THE GOOD OBJECT
             string returnTest = TwitterApiCall<string>(url, NameRequestTwitterAPI.RetweetOrUpdate, HTTPVerb.POST, queryParameters);
         }
 
@@ -321,7 +322,7 @@ namespace YouggyTw
                 }
             }
             catch (System.Net.WebException ex)
-            {
+             {
                 if ((int)((HttpWebResponse)ex.Response).StatusCode == 429)
                 {
                     LogTools.WriteLog("erreur 429, " + TimeOutBeforeRequest + "m d'attente pour l'appel : " + address);

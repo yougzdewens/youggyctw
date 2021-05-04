@@ -91,44 +91,13 @@ namespace ConcoursTwitter.Core
 
             idUser = twitter.VerifyCredentials().Id;
 
-            //twitter.GetDirectMessage();
-            //twitter.SendDirectMessage(1204068156274290688, "heyyy !");
-
-
             concoursTwitterCoreFriends = new ConcoursTwitterCoreFriends(twitter);
 
             if (ConfigurationTools.ResetMode == "true")
             {
                 concoursTwitterCoreFriends.DeleteAllFriends();
             }
-
-            //twitter.DeleteFriend(new User() { Id = 187193029 });
-
-            //twitterManager.DeleteDirectMessages();
-            //this.messageBusiness.DeleteAll();
         }
-
-        //public static InfoService GetInfoService()
-        //{
-        //    return TwitterService.Instance.infoService;
-        //}
-
-        //public static TwitterService Instance
-        //{
-        //    get
-        //    {
-        //        lock (padlock)
-        //        {
-        //            if (instance == null)
-        //            {
-        //                instance = new TwitterService();
-        //                Started = false;
-        //            }
-
-        //            return instance;
-        //        }
-        //    }
-        //}
 
         /// <summary>
         /// Starts the search direct message.
@@ -182,14 +151,12 @@ namespace ConcoursTwitter.Core
             Task task2 = Task.Factory.StartNew(() => { StartSearchCitation(); });
             Task task3 = Task.Factory.StartNew(() => { StartSearchDirectMessage(); });
 
-
             task1.Wait();
             task2.Wait();
             task3.Wait();
             LogTools.WriteLog("Fin des tâches");
 
             friendsBusiness = new FriendsBusiness();
-
         }
 
         /// <summary>
@@ -250,7 +217,12 @@ namespace ConcoursTwitter.Core
 
                         if (responseText != string.Empty)
                         {
-                            bool isSent = twitter.SendDirectMessage(long.Parse(message.MessageCreate.SenderId), responseText);
+                            bool isSent = true;
+
+                            if (responseText != "Sorry, Your chat request has timed out.")
+                            {
+                                isSent = twitter.SendDirectMessage(long.Parse(message.MessageCreate.SenderId), responseText);
+                            }
 
                             if (isSent)
                             {
@@ -319,7 +291,7 @@ namespace ConcoursTwitter.Core
         {
             infoService.DateLastCheck = DateTime.Now;
 
-            List<FriendsModel> allFriends = friendsBusiness.GetAll();
+            List<FriendsModel> allFriends = friendsBusiness.GetAll(concoursTwitterCoreFriends.GetAllFriends());
 
             string searchAndFollow = ConfigurationTools.SearchAndFollow;
             List<List<string>> listWordsToFindRTFollow = searchAndFollow.Split(';').Select(x => x.Split(',').ToList()).ToList();
@@ -379,7 +351,7 @@ namespace ConcoursTwitter.Core
                                     }
 
                                     // Reply with mention friends
-                                    twitter.Reply(tweetFromFriend, status);
+                                    twitter.Reply(tweetFromFriend.IdStr, tweetFromFriend.User.IdStr, status);
                                 }
 
                                 foreach (UserMention twitterMention in tweetFromFriend.Entities.UserMentions)

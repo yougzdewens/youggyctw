@@ -50,7 +50,7 @@ namespace YouggyTw.Model
         public bool Retweeted { get; set; }
 
         [JsonProperty("in_reply_to_user_id")]
-        public int? InReplyToUserId { get; set; }
+        public long? InReplyToUserId { get; set; }
 
         [JsonProperty("place")]
         public object Place { get; set; }
